@@ -3,7 +3,7 @@
     "project": "some project",
     "environment": "some env",
     "comment": "some comment",
-    "reportLink": "https://jenkins.autotests.cloud/job/C31-SerzhSH-java_17_simple/36/",
+    "reportLink": "https://jenkins.autotests.cloud/job/C31-SerzhSH-java_17_axenix/36/",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "allure-report",
