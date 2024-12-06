@@ -46,7 +46,7 @@ public class StartPage {
         return this;
     }
     public StartPage searchSpbOffice (){
-        $(".grid").shouldHave(text("170006, г. Тверь, ул. Дмитрия Донского, 37777"));
+        $(".grid").shouldHave(text("170006, г. Тверь, ул. Дмитрия Донского, 37"));
         return this;
     }
 }
