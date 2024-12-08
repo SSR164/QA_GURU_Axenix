@@ -1,52 +1,39 @@
 package page;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 
 import static com.codeborne.selenide.Selenide.*;
 public class StartPage {
-    private  SelenideElement contact =$(".contacts");
-
+    private  SelenideElement contact =$(".contacts"),
+                        headerMenu=$(".header-menu");
+@Step("Открываем сайт Axenix")
     public StartPage openPage(){
         open("");
         return this;
     }
+    @Step("Ищем контактный телефон")
     public StartPage searchPhone(){
         contact.shouldHave(text("+7 (495) 755-97-70"));
         return this;
     }
+    @Step("Ищем электронную почту")
     public StartPage searchMail(){
         contact.shouldHave(text("info-russia@axenix.pro"));
         return this;
     }
+    @Step("Переходим на вкладку \"Карьера\"")
     public StartPage clickCareer (){
-        $(byText("Карьера")).click();
-        return this;
-    }
-    public StartPage clickVacancies (){
-        $(byText("Открытые вакансии")).click();
-        return this;
-    }
-    public StartPage сlickQaAutomationEngineer (){
-        $(byText("QA Automation Engineer")).click();
-        return this;
-    }
-    public StartPage searchQaAutomationEngineer (){
-        $("._vacancy-details").shouldHave(text("приглашаем в команду специалистов по автоматизированному тестированию."));
+        headerMenu.$(byText("Карьера")).click();
         return this;
     }
 
+    @Step("Переходим на вкладку \"СЕТЬ ОФИСОВ\"")
     public StartPage clickOffice (){
-        $(byText("СЕТЬ ОФИСОВ")).click();
+       headerMenu.$(byText("СЕТЬ ОФИСОВ")).click();
         return this;
     }
-    public StartPage searchMoscovOffice (){
-        $(".grid").shouldHave(text("115054, г. Москва, Павелецкая площадь, 2, стр. 21"));
-        return this;
-    }
-    public StartPage searchSpbOffice (){
-        $(".grid").shouldHave(text("170006, г. Тверь, ул. Дмитрия Донского, 37"));
-        return this;
-    }
+
 }
