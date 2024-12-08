@@ -42,7 +42,7 @@ public class StartPage {
         return this;
     }
     public StartPage searchMoscovOffice (){
-        $(".grid").shouldHave(text("115054, г. Москва, Павелецкая площадь, 2, стр. 2"));
+        $(".grid").shouldHave(text("115054, г. Москва, Павелецкая площадь, 2, стр. 21"));
         return this;
     }
     public StartPage searchSpbOffice (){
