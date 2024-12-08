@@ -28,13 +28,9 @@ public class TestsBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-
-
-    }
-    @BeforeEach
-    void addAllureListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
