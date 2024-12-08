@@ -28,8 +28,13 @@ public class TestsBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
+    }
+    @BeforeEach
+    void addAllureListener() {
+        SelenideLogger.removeListener("AllureSelenide");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+
 
     @AfterEach
     void addAttachments() {
