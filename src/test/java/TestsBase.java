@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.util.Map;
 
 public class TestsBase {
@@ -29,6 +30,7 @@ public class TestsBase {
         Configuration.browserCapabilities = capabilities;
 
     }
+
     @BeforeEach
     void addAllureListener() {
         SelenideLogger.removeListener("AllureSelenide");

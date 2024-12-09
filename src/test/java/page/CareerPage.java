@@ -8,21 +8,24 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CareerPage {
-    private SelenideElement vacancies =$(".hero-text"),
-                 qaAutomationEngineer =$(".vacancy-block.block-alt.bg-b"),
-                       vacancyDetails =$("._vacancy-details");
+    private SelenideElement vacancies = $(".hero-text"),
+            qaAutomationEngineer = $(".vacancy-block.block-alt.bg-b"),
+            vacancyDetails = $("._vacancy-details");
+
     @Step("Переходим к вакансиям ")
-    public CareerPage clickVacancies (){
+    public CareerPage clickVacancies() {
         vacancies.$(byText("Открытые вакансии")).click();
         return this;
     }
+
     @Step("Открываем вакансию QAQ ")
-    public CareerPage сlickQaAutomationEngineer (){
+    public CareerPage сlickQaAutomationEngineer() {
         qaAutomationEngineer.$(byText("QA Automation Engineer")).click();
         return this;
     }
+
     @Step("Проверяем описание ")
-    public CareerPage searchQaAutomationEngineer (){
+    public CareerPage searchQaAutomationEngineer() {
         vacancyDetails.shouldHave(text("приглашаем в команду специалистов по автоматизированному тестированию."));
         return this;
     }

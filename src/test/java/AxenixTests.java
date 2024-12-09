@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 import page.CareerPage;
 import page.OfficePage;
 import page.StartPage;
@@ -10,18 +11,19 @@ public class AxenixTests extends TestsBase {
     CareerPage careerPage=new CareerPage();
     OfficePage officePage=new OfficePage();
 
+    @DisplayName("Поиск номера телефона")
     @Test
     void searchPhoneTests(){
             startPage.openPage();
             startPage.searchPhone();
     }
-
+    @DisplayName("Поиск адреса электронной почты")
     @Test
     void searchMailTests(){
             startPage.openPage();
             startPage.searchMail();
     }
-
+    @DisplayName("Поиск вакансию QAQ")
     @Test
     void searchVacanciesAqaTests(){
             startPage.openPage();
@@ -31,7 +33,7 @@ public class AxenixTests extends TestsBase {
             careerPage.searchQaAutomationEngineer();
 
     }
-
+    @DisplayName("Поиск офиса в Москве")
     @Test
     void searchOfficeMoscovTests(){
             startPage.openPage();
@@ -40,7 +42,7 @@ public class AxenixTests extends TestsBase {
 
 
     }
-
+    @DisplayName("Поиск офиса в Твери")
     @Test
     void searchOfficeSpbTests(){
             startPage.openPage();
