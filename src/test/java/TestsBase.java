@@ -19,7 +19,7 @@ public class TestsBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.remote = System.getProperty("remoteUrl");
+        //Configuration.remote = System.getProperty("remoteUrl");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
